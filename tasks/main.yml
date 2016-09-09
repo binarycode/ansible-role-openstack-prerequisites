@@ -1,0 +1,15 @@
+---
+- name: Setup OpenStack Mitaka repository.
+  yum:
+    name:  centos-release-openstack-mitaka
+    state: present
+
+- name: Install OpenStack client.
+  yum:
+    name:  python-openstackclient
+    state: present
+
+- name: Install package to automatically manage security policies for OpenStack services.
+  yum:
+    name:  openstack-selinux
+    state: present
